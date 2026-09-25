@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brown: #53473e;
+  --color-light-brown: #645550;
+  --color-dark-brown: #2c2523;
+  --color-black: #1e1917;
+  --color-white: #f1e1d9;
+  --color-cyan: #15d1e9;
+  --color-light-cyan: #88e5f0;
+  --color-dark-cyan: #089fb3;
+  --color-orange: #fb9718;
+  --color-light-orange: #fac27b;
+  --color-dark-orange: #d28422;
+  --color-grey: #626965;
+  --color-light-grey: #978580;
+  --color-dark-grey: #3f4441;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #88e5f0;
+  --color-primary-300: #88e5f0;
+  --color-primary-500: #15d1e9;
+  --color-primary-600: #089fb3;
+  --color-primary-900: #0c4a6e;
+  
+  --color-dark-700: #3f4441;
+  --color-dark-800: #2c2523;
+  --color-dark-900: #1e1917;
+}
+
+/* Anti Side-Scroll & Hidden Scrollbar Engine (Fluid & Responsive) */
+html, body, #root {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box !important;
+}
+
+/* Hide visible scrollbars visually while preserving smooth scrolling */
+html, body, #root, main, aside, nav, div, section, article {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+
+/* Executive Professional Typography */
+body, .font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+  letter-spacing: -0.01em;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', Consolas, Monaco, 'Courier New', monospace !important;
+}
+
+/* Dark Mode Palette Rules (Warm Black #1e1917, Dark Brown #2c2523, Cyan #15d1e9, Orange #fb9718) */
+html:not(.light) body,
+html.dark body {
+  background-color: #1e1917 !important;
+  color: #f1e1d9 !important;
+}
+
+html:not(.light) .bg-dark-900,
+html.dark .bg-dark-900 {
+  background-color: #1e1917 !important;
+}
+
+html:not(.light) .bg-dark-800,
+html.dark .bg-dark-800 {
+  background-color: #2c2523 !important;
+  border-color: #3f4441 !important;
+  box-shadow: 0 4px 20px 0px rgba(21, 209, 233, 0.08) !important;
+}
+
+html:not(.light) .bg-dark-700,
+html.dark .bg-dark-700 {
+  background-color: #3f4441 !important;
+  border-color: #53473e !important;
+}
+
+html:not(.light) .border-slate-700,
+html:not(.light) .border-slate-600,
+html.dark .border-slate-700,
+html.dark .border-slate-600 {
+  border-color: #3f4441 !important;
+}
+
+html:not(.light) .text-slate-100,
+html.dark .text-slate-100 {
+  color: #f1e1d9 !important;
+}
+
+html:not(.light) .text-slate-200,
+html.dark .text-slate-200 {
+  color: #fac27b !important;
+}
+
+html:not(.light) .text-slate-300,
+html.dark .text-slate-300 {
+  color: #f1e1d9 !important;
+}
+
+html:not(.light) .text-slate-400,
+html.dark .text-slate-400 {
+  color: #978580 !important;
+}
+
+html:not(.light) .text-primary-400,
+html:not(.light) .text-primary-500,
+html.dark .text-primary-400,
+html.dark .text-primary-500 {
+  color: #15d1e9 !important;
+}
+
+html:not(.light) .bg-primary-500\/10,
+html.dark .bg-primary-500\/10 {
+  background-color: rgba(21, 209, 233, 0.12) !important;
+  color: #15d1e9 !important;
+}
+
+/* Custom Shadow Utility Classes */
+.shadow-cyan-glow {
+  box-shadow: 0px 0px 20px 0px rgba(21, 209, 233, 0.5) !important;
+}
+
+.shadow-cyan-medium {
+  box-shadow: 0px 0px 40px 10px rgba(21, 209, 233, 0.25) !important;
+}
+
+.shadow-orange-medium {
+  box-shadow: 0px 0px 40px 10px rgba(251, 151, 24, 0.25) !important;
+}
+
+
+/* Eye-Friendly High-Contrast Light Theme Engine */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+html.light .bg-dark-900 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-dark-800 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -1px rgba(15, 23, 42, 0.04) !important;
+}
+
+html.light .bg-dark-700 {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-slate-700,
+html.light .border-slate-700\/80,
+html.light .border-slate-700\/60 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-slate-600 {
+  border-color: #94a3b8 !important;
+}
+
+/* Text Visibility Fixes for Light Mode */
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Button & Action Visibility */
+html.light button.text-white,
+html.light .bg-primary-600,
+html.light .bg-gradient-to-r.from-primary-600.to-indigo-600,
+html.light .bg-emerald-600,
+html.light .bg-rose-600 {
+  color: #ffffff !important;
+}
+
+html.light button.bg-dark-900 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+html.light button.bg-dark-900:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+}
+
+html.light .hover\:bg-dark-700:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .hover\:bg-dark-600:hover {
+  background-color: #cbd5e1 !important;
+}
+
+html.light .hover\:bg-slate-700:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .bg-dark-900\/80,
+html.light .bg-dark-900\/90 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Form Inputs & Selects */
+html.light input,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+html.light input:focus,
+html.light select:focus {
+  background-color: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.25) !important;
+}
+
+html.light input::placeholder {
+  color: #64748b !important;
+}
+
+/* Gradient Banners & Logo Header */
+html.light .bg-gradient-to-r.from-dark-800.to-dark-900 {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+html.light .bg-gradient-to-r.from-primary-500.to-primary-100 {
+  background: linear-gradient(to right, #0284c7, #4f46e5) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Recharts Visibility Fixes */
+html.light .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+html.light .recharts-tooltip-item {
+  color: #0284c7 !important;
+  font-weight: 600 !important;
+}
+
+html.light .recharts-tooltip-label {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+html.light .recharts-cartesian-grid-horizontal line,
+html.light .recharts-cartesian-grid-vertical line {
+  stroke: #cbd5e1 !important;
+}
+
+html.light .recharts-text {
+  fill: #475569 !important;
+}
+
+/* Data Tables */
+html.light table thead {
+  background-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+html.light table tbody tr:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .divide-slate-700\/60 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #cbd5e1 !important;
+}
+
+/* Consent Status Pills in Light Mode */
+html.light .bg-slate-400\/10 {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+html.light .bg-blue-400\/10 {
+  background-color: #e0f2fe !important;
+  color: #0284c7 !important;
+  border: 1px solid #bae6fd !important;
+}
+
+html.light .bg-rose-400\/10 {
+  background-color: #ffe4e6 !important;
+  color: #e11d48 !important;
+  border: 1px solid #fecdd3 !important;
+}
+
+/* Accent Badges in Light Mode */
+html.light .text-primary-400,
+html.light .text-primary-500 {
+  color: #0284c7 !important;
+}
+
+html.light .bg-primary-500\/10 {
+  background-color: #e0f2fe !important;
+  color: #0284c7 !important;
+}
+
+html.light .bg-emerald-900\/40,
+html.light .bg-emerald-950\/40 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html.light .bg-red-950\/30,
+html.light .bg-red-950\/40 {
+  background-color: #ffe4e6 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+}
+
+html.light .bg-indigo-950\/40,
+html.light .bg-indigo-900\/50 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+}
+
+
+
+
+
+

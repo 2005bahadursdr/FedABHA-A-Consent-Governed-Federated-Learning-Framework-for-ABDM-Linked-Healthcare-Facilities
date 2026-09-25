@@ -1,0 +1,15 @@
+pandas==2.2.2
+pytest==8.0.0
+fastapi
+uvicorn
+pydantic
+motor
+torch
+flwr
+opacus
+shap
+scikit-learn
+numpy
+matplotlib
+seaborn
+

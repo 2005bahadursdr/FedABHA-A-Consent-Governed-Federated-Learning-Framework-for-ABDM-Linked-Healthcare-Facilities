@@ -1,0 +1,8 @@
+{
+    "hospital_id": "hospital_C",
+    "dataset_path": "../../data/hospitals/hospital_C.csv",
+    "batch_size": 32,
+    "learning_rate": 0.01,
+    "epochs": 5,
+    "simulate_poisoning": false
+}

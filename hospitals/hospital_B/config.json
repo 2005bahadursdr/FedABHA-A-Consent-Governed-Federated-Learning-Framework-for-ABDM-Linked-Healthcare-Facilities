@@ -1,0 +1,7 @@
+{
+    "hospital_id": "hospital_B",
+    "dataset_path": "../../data/hospitals/hospital_B.csv",
+    "batch_size": 32,
+    "learning_rate": 0.01,
+    "epochs": 5
+}
